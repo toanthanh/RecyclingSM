@@ -12,7 +12,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="RI3-P6-dN8">
             <objects>
-                <viewController storyboardIdentifier="SignInViewController" id="097-w8-9Hf" customClass="SignInViewController" customModule="InstagramClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="097-w8-9Hf" customClass="SignInViewController" customModule="RecyclingSM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rdv-cb-WF9"/>
                         <viewControllerLayoutGuide type="bottom" id="kor-sC-4NC"/>
@@ -63,7 +63,7 @@
                                     <constraint firstAttribute="height" constant="44" id="Sc8-qD-M6i"/>
                                 </constraints>
                                 <state key="normal" title="Don't have an account?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="VTE-tb-V8W" kind="presentation" id="yL5-bR-z3R"/>
@@ -72,11 +72,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecyclingSM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8p-q5-1YG">
                                 <rect key="frame" x="97" y="111" width="181.5" height="58"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KuY-oV-9Ln" firstAttribute="centerX" secondItem="ZQP-ls-Eqm" secondAttribute="centerX" id="0mG-Sm-c8q"/>
                             <constraint firstItem="tFT-Jw-Wy3" firstAttribute="leading" secondItem="ZQP-ls-Eqm" secondAttribute="leading" id="Fav-rE-3tl"/>
@@ -103,7 +103,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="zMU-I9-LHe">
             <objects>
-                <viewController id="VTE-tb-V8W" customClass="SignUpViewController" customModule="InstagramClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VTE-tb-V8W" customClass="SignUpViewController" customModule="RecyclingSM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XaW-FK-Oxh"/>
                         <viewControllerLayoutGuide type="bottom" id="GB4-9v-2XM"/>
@@ -163,7 +163,7 @@
                                     <constraint firstAttribute="height" constant="44" id="r2Q-Ta-VsS"/>
                                 </constraints>
                                 <state key="normal" title="Already have an account? Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="dismiss_onClick:" destination="VTE-tb-V8W" eventType="touchUpInside" id="uuu-LI-2Rw"/>
@@ -177,7 +177,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VGC-TB-dJi" firstAttribute="centerX" secondItem="qoP-KS-OIZ" secondAttribute="centerX" id="9ph-Iw-ydH"/>
                             <constraint firstItem="VGC-TB-dJi" firstAttribute="leading" secondItem="qoP-KS-OIZ" secondAttribute="leading" constant="20" id="AAI-ja-yPk"/>
