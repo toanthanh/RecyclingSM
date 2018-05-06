@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="097-w8-9Hf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="097-w8-9Hf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,13 +43,10 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="265-Mg-Oly">
                                         <rect key="frame" x="0.0" y="100" width="335" height="44"/>
-                                        <color key="backgroundColor" red="0.1052419622" green="0.75405124150000002" blue="0.2039020037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Dwc-33-e52"/>
                                         </constraints>
-                                        <state key="normal" title="Sign In">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <state key="normal" title="Sign In"/>
                                         <connections>
                                             <action selector="signInButton_TouchUpInside:" destination="097-w8-9Hf" eventType="touchUpInside" id="d4y-Mg-ryF"/>
                                         </connections>
@@ -62,17 +59,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Sc8-qD-M6i"/>
                                 </constraints>
-                                <state key="normal" title="Don't have an account?">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Don't have an account?"/>
                                 <connections>
                                     <segue destination="VTE-tb-V8W" kind="presentation" id="yL5-bR-z3R"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecyclingSM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8p-q5-1YG">
-                                <rect key="frame" x="97" y="111" width="181.5" height="58"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="36"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecyclingSM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8p-q5-1YG">
+                                <rect key="frame" x="69.5" y="111" width="235" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -98,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2j-Pg-9gI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-566" y="-91"/>
+            <point key="canvasLocation" x="-567.20000000000005" y="-91.304347826086968"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="zMU-I9-LHe">
@@ -144,12 +139,11 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAe-I9-EGi">
                                         <rect key="frame" x="0.0" y="150" width="335" height="44"/>
-                                        <color key="backgroundColor" red="0.1052419622" green="0.75405124150000002" blue="0.2039020037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="fgc-Ti-06i"/>
                                         </constraints>
                                         <state key="normal" title="Sign Up">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="signUpBtn_TouchUpInside:" destination="VTE-tb-V8W" eventType="touchUpInside" id="ERk-Q3-dWl"/>
@@ -162,9 +156,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="r2Q-Ta-VsS"/>
                                 </constraints>
-                                <state key="normal" title="Already have an account? Sign In">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Already have an account? Sign In"/>
                                 <connections>
                                     <action selector="dismiss_onClick:" destination="VTE-tb-V8W" eventType="touchUpInside" id="uuu-LI-2Rw"/>
                                 </connections>
@@ -216,6 +208,6 @@
         <image name="placeholderImg" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JRp-rs-fkO"/>
+        <segue reference="67q-py-SuJ"/>
     </inferredMetricsTieBreakers>
 </document>

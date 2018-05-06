@@ -3,8 +3,8 @@
 //  RecyclingSM
 //
 //  Created by Toan Thanh on 4/25/18.
+//  Copyright © 2018 Toan Thanh. All rights reserved.
 //
-
 import UIKit
 
 class SignUpViewController: UIViewController {
@@ -21,31 +21,31 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         usernameTextField.backgroundColor = UIColor.clear
-        usernameTextField.tintColor = UIColor.white
-        usernameTextField.textColor = UIColor.gray
-        usernameTextField.attributedPlaceholder = NSAttributedString(string: usernameTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor: UIColor.gray])
+        //        usernameTextField.tintColor = UIColor.white
+        usernameTextField.textColor = UIColor.black
+        usernameTextField.attributedPlaceholder = NSAttributedString(string: usernameTextField.placeholder!, attributes: [kCTForegroundColorAttributeName as NSAttributedStringKey: UIColor.gray])
         let bottomLayerUsername = CALayer()
         bottomLayerUsername.frame = CGRect(x: 0, y: 29, width: 1000, height: 0.6)
         bottomLayerUsername.backgroundColor = UIColor(red: 50/255, green: 50/255, blue: 25/255, alpha: 1).cgColor
-//        usernameTextField.layer.addSublayer(bottomLayerUsername)
+        //        usernameTextField.layer.addSublayer(bottomLayerUsername)
         
         emailTextField.backgroundColor = UIColor.clear
-        emailTextField.tintColor = UIColor.white
-        emailTextField.textColor = UIColor.gray
-        emailTextField.attributedPlaceholder = NSAttributedString(string: emailTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor: UIColor.gray])
+        //        emailTextField.tintColor = UIColor.white
+        emailTextField.textColor = UIColor.black
+        emailTextField.attributedPlaceholder = NSAttributedString(string: emailTextField.placeholder!, attributes: [kCTForegroundColorAttributeName as NSAttributedStringKey: UIColor.gray])
         let bottomLayerEmail = CALayer()
         bottomLayerEmail.frame = CGRect(x: 0, y: 29, width: 1000, height: 0.6)
         bottomLayerEmail.backgroundColor = UIColor(red: 50/255, green: 50/255, blue: 25/255, alpha: 1).cgColor
-//        emailTextField.layer.addSublayer(bottomLayerEmail)
+        //        emailTextField.layer.addSublayer(bottomLayerEmail)
         
         passwordTextField.backgroundColor = UIColor.clear
-        passwordTextField.tintColor = UIColor.white
-        passwordTextField.textColor = UIColor.gray
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: passwordTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor: UIColor.gray])
+        //        passwordTextField.tintColor = UIColor.white
+        passwordTextField.textColor = UIColor.black
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: passwordTextField.placeholder!, attributes: [kCTForegroundColorAttributeName as NSAttributedStringKey: UIColor.gray])
         let bottomLayerPassword = CALayer()
         bottomLayerPassword.frame = CGRect(x: 0, y: 29, width: 1000, height: 0.6)
         bottomLayerPassword.backgroundColor = UIColor(red: 50/255, green: 50/255, blue: 25/255, alpha: 1).cgColor
-//        passwordTextField.layer.addSublayer(bottomLayerPassword)
+        //        passwordTextField.layer.addSublayer(bottomLayerPassword)
         
         profileImage.layer.cornerRadius = 40
         profileImage.clipsToBounds = true
@@ -68,7 +68,7 @@ class SignUpViewController: UIViewController {
         
     }
     
-    @objc func textFieldDidChange() {
+    func textFieldDidChange() {
         guard let username = usernameTextField.text, !username.isEmpty, let email = emailTextField.text, !email.isEmpty,
             let password = passwordTextField.text, !password.isEmpty else {
                 signUpButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
@@ -76,12 +76,11 @@ class SignUpViewController: UIViewController {
                 return
         }
         
-        signUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        //        signUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         signUpButton.isEnabled = true
     }
     
     @objc func handleSelectProfileImageView() {
-        //take photo from device photo library
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         present(pickerController, animated: true, completion: nil)
@@ -90,7 +89,6 @@ class SignUpViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    //use AuthService
     @IBAction func signUpBtn_TouchUpInside(_ sender: Any) {
         view.endEditing(true)
         ProgressHUD.show("Waiting...", interaction: false)
@@ -102,7 +100,7 @@ class SignUpViewController: UIViewController {
                 ProgressHUD.showError(errorString!)
             })
         } else {
-             ProgressHUD.showError("Profile Image can't be empty")
+            ProgressHUD.showError("Profile Image can't be empty")
         }
     }
 }
