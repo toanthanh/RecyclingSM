@@ -82,7 +82,7 @@ class CommentViewController: UIViewController {
     
     func textFieldDidChange() {
         if let commentText = commentTextField.text, !commentText.isEmpty {
-            sendButton.setTitleColor(UIColor.black, for: UIControlState.normal)
+          //  sendButton.setTitleColor(UIColor.black, for: UIControlState.normal)
             sendButton.isEnabled = true
             return
         }

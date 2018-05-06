@@ -22,8 +22,8 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         usernameTextField.backgroundColor = UIColor.clear
-        usernameTextField.tintColor = UIColor.white
-        usernameTextField.textColor = UIColor.gray
+//        usernameTextField.tintColor = UIColor.white
+        usernameTextField.textColor = UIColor.black
         usernameTextField.attributedPlaceholder = NSAttributedString(string: usernameTextField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor.gray])
         let bottomLayerUsername = CALayer()
         bottomLayerUsername.frame = CGRect(x: 0, y: 29, width: 1000, height: 0.6)
@@ -31,8 +31,8 @@ class SignUpViewController: UIViewController {
 //        usernameTextField.layer.addSublayer(bottomLayerUsername)
         
         emailTextField.backgroundColor = UIColor.clear
-        emailTextField.tintColor = UIColor.white
-        emailTextField.textColor = UIColor.gray
+//        emailTextField.tintColor = UIColor.white
+        emailTextField.textColor = UIColor.black
         emailTextField.attributedPlaceholder = NSAttributedString(string: emailTextField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor.gray])
         let bottomLayerEmail = CALayer()
         bottomLayerEmail.frame = CGRect(x: 0, y: 29, width: 1000, height: 0.6)
@@ -40,8 +40,8 @@ class SignUpViewController: UIViewController {
 //        emailTextField.layer.addSublayer(bottomLayerEmail)
         
         passwordTextField.backgroundColor = UIColor.clear
-        passwordTextField.tintColor = UIColor.white
-        passwordTextField.textColor = UIColor.gray
+//        passwordTextField.tintColor = UIColor.white
+        passwordTextField.textColor = UIColor.black
         passwordTextField.attributedPlaceholder = NSAttributedString(string: passwordTextField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor.gray])
         let bottomLayerPassword = CALayer()
         bottomLayerPassword.frame = CGRect(x: 0, y: 29, width: 1000, height: 0.6)
@@ -77,7 +77,7 @@ class SignUpViewController: UIViewController {
                 return
         }
         
-        signUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+//        signUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         signUpButton.isEnabled = true
     }
     

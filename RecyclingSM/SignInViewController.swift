@@ -15,10 +15,10 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.backgroundColor = UIColor.clear
-        emailTextField.tintColor = UIColor.white
+        emailTextField.tintColor = UIColor.black
 //        emailTextField.textColor = UIColor.white
 //        emailTextField.attributedPlaceholder = NSAttributedString(string: emailTextField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.6)])
-        emailTextField.textColor = UIColor.gray
+        emailTextField.textColor = UIColor.black
         emailTextField.attributedPlaceholder = NSAttributedString(string: emailTextField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor.gray])
         let bottomLayerEmail = CALayer()
         bottomLayerEmail.frame = CGRect(x: 0, y: 29, width: 1000, height: 0.6)
@@ -26,8 +26,8 @@ class SignInViewController: UIViewController {
 //        emailTextField.layer.addSublayer(bottomLayerEmail)
         
         passwordTextField.backgroundColor = UIColor.clear
-        passwordTextField.tintColor = UIColor.white
-        passwordTextField.textColor = UIColor.gray
+        passwordTextField.tintColor = UIColor.black
+        passwordTextField.textColor = UIColor.black
         passwordTextField.attributedPlaceholder = NSAttributedString(string: passwordTextField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor.gray])
         let bottomLayerPassword = CALayer()
         bottomLayerPassword.frame = CGRect(x: 0, y: 29, width: 1000, height: 0.6)
@@ -59,12 +59,9 @@ class SignInViewController: UIViewController {
     func textFieldDidChange() {
         guard let email = emailTextField.text, !email.isEmpty,
             let password = passwordTextField.text, !password.isEmpty else {
-                signInButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
                 signInButton.isEnabled = false
                 return
         }
-        
-        signInButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         signInButton.isEnabled = true
     }
     
