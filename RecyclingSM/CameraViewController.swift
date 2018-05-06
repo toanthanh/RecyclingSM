@@ -3,7 +3,6 @@
 //  RecyclingSM
 //
 //  Created by Toan Thanh on 4/25/18.
-//  Copyright © 2018 Toan Thanh. All rights reserved.
 //
 
 import UIKit
@@ -47,7 +46,7 @@ class CameraViewController: UIViewController {
         view.endEditing(true)
     }
     
-    func handleSelectPhoto() {
+    @objc func handleSelectPhoto() {
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.mediaTypes = ["public.image", "public.movie"]

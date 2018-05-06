@@ -3,7 +3,6 @@
 //  RecyclingSM
 //
 //  Created by Toan Thanh on 4/25/18.
-//  Copyright © 2018 Toan Thanh. All rights reserved.
 //
 
 import UIKit
@@ -36,7 +35,7 @@ class CommentViewController: UIViewController {
         view.endEditing(true)
     }
     
-    func keyboardWillShow(_ notification: NSNotification) {
+    @objc func keyboardWillShow(_ notification: NSNotification) {
         print(notification)
         let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
         UIView.animate(withDuration: 0.3) {
@@ -45,7 +44,7 @@ class CommentViewController: UIViewController {
 
         }
     }
-    func keyboardWillHide(_ notification: NSNotification) {
+    @objc func keyboardWillHide(_ notification: NSNotification) {
         UIView.animate(withDuration: 0.3) {
             self.constraintToBottom.constant = 0
             self.view.layoutIfNeeded()
@@ -80,7 +79,7 @@ class CommentViewController: UIViewController {
         commentTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
     }
     
-    func textFieldDidChange() {
+    @objc func textFieldDidChange() {
         if let commentText = commentTextField.text, !commentText.isEmpty {
             sendButton.setTitleColor(UIColor.black, for: UIControlState.normal)
             sendButton.isEnabled = true

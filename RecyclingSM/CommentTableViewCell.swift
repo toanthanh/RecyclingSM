@@ -3,7 +3,6 @@
 //  RecyclingSM
 //
 //  Created by Toan Thanh on 4/25/18.
-//  Copyright © 2018 Toan Thanh. All rights reserved.
 //
 
 import UIKit
@@ -36,7 +35,7 @@ class CommentTableViewCell: UITableViewCell {
         commentLabel.userHandleLinkTapHandler = {
             label, handle, rang in
             var mention = handle
-            mention = String(mention.characters.dropFirst())
+            mention = String(mention.dropFirst())
             Api.User.observeUserByUsername(username: mention.lowercased(), completion: { (user) in
                 self.delegate?.goToProfileUserVC(userId: user.id!)
             })
@@ -62,7 +61,7 @@ class CommentTableViewCell: UITableViewCell {
         nameLabel.isUserInteractionEnabled = true
     }
     
-    func nameLabel_TouchUpInside() {
+    @objc func nameLabel_TouchUpInside() {
         if let id = user?.id {
             delegate?.goToProfileUserVC(userId: id)
         }

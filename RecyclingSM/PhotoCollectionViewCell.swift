@@ -3,7 +3,6 @@
 //  RecyclingSM
 //
 //  Created by Toan Thanh on 4/25/18.
-//  Copyright © 2018 Toan Thanh. All rights reserved.
 //
 
 import UIKit
@@ -35,7 +34,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 
     }
     
-    func photo_TouchUpInside() {
+    @objc func photo_TouchUpInside() {
         if let id = post?.id {
             delegate?.goToDetailVC(postId: id)
         }

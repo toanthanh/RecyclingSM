@@ -4,7 +4,6 @@
 //  RecyclingSM
 //
 //  Created by Toan Thanh on 4/25/18.
-//  Copyright © 2018 Toan Thanh. All rights reserved.
 //
 
 import UIKit
@@ -125,14 +124,14 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     
-    func nameLabel_TouchUpInside() {
+    @objc func nameLabel_TouchUpInside() {
         if let id = user?.id {
             delegate?.goToProfileUserVC(userId: id)
         }
     }
 
     
-    func likeImageView_TouchUpInside() {
+    @objc func likeImageView_TouchUpInside() {
         Api.Post.incrementLikes(postId: post!.id!, onSucess: { (post) in
             self.updateLike(post: post)
             self.post?.likes = post.likes
@@ -144,7 +143,7 @@ class HomeTableViewCell: UITableViewCell {
         //incrementLikes(forRef: postRef)
     }
     
-    func commentImageView_TouchUpInside() {
+    @objc func commentImageView_TouchUpInside() {
       print("commentImageView_TouchUpInside")
         if let id = post?.id {
             delegate?.goToCommentVC(postId: id)
