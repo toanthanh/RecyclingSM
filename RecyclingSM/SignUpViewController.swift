@@ -3,7 +3,6 @@
 //  RecyclingSM
 //
 //  Created by Toan Thanh on 4/25/18.
-//  Copyright © 2018 Toan Thanh. All rights reserved.
 //
 import UIKit
 
@@ -68,7 +67,7 @@ class SignUpViewController: UIViewController {
         
     }
     
-    func textFieldDidChange() {
+    @objc func textFieldDidChange() {
         guard let username = usernameTextField.text, !username.isEmpty, let email = emailTextField.text, !email.isEmpty,
             let password = passwordTextField.text, !password.isEmpty else {
                 signUpButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)

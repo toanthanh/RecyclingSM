@@ -3,7 +3,6 @@
 //  RecyclingSM
 //
 //  Created by Toan Thanh on 4/25/18.
-//  Copyright © 2018 Toan Thanh. All rights reserved.
 //
 import UIKit
 class SignInViewController: UIViewController {
@@ -36,10 +35,12 @@ class SignInViewController: UIViewController {
         handleTextField()
     }
     
+    //dismiss keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
     
+    //auto login
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

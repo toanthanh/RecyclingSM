@@ -361,13 +361,13 @@
     </scenes>
     <resources>
         <image name="Comment" width="43" height="41"/>
-        <image name="Home" width="21" height="23"/>
-        <image name="Home_Selected" width="21" height="23"/>
+        <image name="Home" width="23" height="23"/>
+        <image name="Home_Selected" width="23" height="23"/>
         <image name="Icon_Mute" width="25" height="25"/>
         <image name="like" width="46" height="41"/>
-        <image name="reserved" width="32" height="32"/>
+        <image name="reserved" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tl5-Cp-x7c"/>
+        <segue reference="ic9-fE-QGT"/>
     </inferredMetricsTieBreakers>
 </document>
